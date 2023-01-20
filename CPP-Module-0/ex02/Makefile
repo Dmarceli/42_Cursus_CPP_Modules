@@ -2,9 +2,8 @@ NAME = Phonebook
 
 PATH_SRC = ./src
 
-SRC = $(PATH_SRC)/main.cpp \
-		$(PATH_SRC)/PhoneBook.cpp \
-		$(PATH_SRC)/Contact.cpp \
+SRC = $(PATH_SRC)/Account.cpp \
+		$(PATH_SRC)/tests.cpp
 
 INCLUDES	=	./incs
 

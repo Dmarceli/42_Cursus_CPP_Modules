@@ -4,7 +4,6 @@
 int main(void) {
 	PhoneBook pb;
 	std::string	input;
-
 	pb.show_instruction();
 	while (42)
 	{
