@@ -53,11 +53,21 @@ void PhoneBook::SearchContact(void)
 		std::cout << "No contacts yet, add some by runnnig \"ADD\"" << std::endl;
 		return ;
 	}
-	std::cout << "\n\n                 \e[1;35mContacts\e[0;0m           " << std::endl;
+	std::cout << "\n\t\t\t\e[1;35mContacts\e[0;0m" << std::endl;
 	std::cout << "+------------+------------+------------+------------+" << std::endl;
 	std::cout << "|   Index    |    Name    |  Surname   |  Nickname  |" << std::endl;
 	std::cout << "+------------+------------+------------+------------+" << std::endl;
 	for (int i = -1; i < _i; i++){
 		PhoneBook::contacts[i + 1].display(i + 1);
 	}
+	str input;
+	std::cout << "\nPICK INDEX: ";
+	std::getline(std::cin, input);
+	int index = atoi(&input[0]);
+	system("clear");
+
+	if (index <= 7 && index >= 0)
+		this->contacts[index].DisplayDetails();
+	else
+		std::cout << "Out of range or invalid character!\n";
 }

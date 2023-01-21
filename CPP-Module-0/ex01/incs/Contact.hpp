@@ -15,6 +15,7 @@ class Contact
 		void	AddPhoneNumber(str lastname);
 		void	AddSecret(str lastname);
 		void	display(int i);
+		void	DisplayDetails();
 	private:
 		str		FirstName;
 		str		LastName;

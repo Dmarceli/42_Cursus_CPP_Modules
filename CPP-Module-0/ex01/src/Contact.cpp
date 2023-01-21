@@ -15,6 +15,7 @@ void print_contact_info(std::string str)
 	std::cout << " |";
 }
 
+
 void	Contact::AddFirstName(str firstname)
 {
 	this->FirstName = firstname;
@@ -39,6 +40,16 @@ void	Contact::AddSecret(str secret)
 	this->Secret = secret;
 }
 
+void	Contact::DisplayDetails()
+{
+	std::cout << "Name: " << this->FirstName << std::endl;
+	std::cout << "Surname: " << this->LastName << std::endl;
+	std::cout << "Nickname: " << this->Nickname << std::endl;
+	std::cout << "Phone Number: " << this->PhoneNumber << std::endl;
+	std::cout << "Darkest Secret: " << this->Secret << std::endl;
+}
+
+
 void Contact::display(int i)
 {
 	std::cout << "|          " << i << " |";
@@ -47,4 +58,5 @@ void Contact::display(int i)
 	print_contact_info(this->Nickname);
 	std::cout << std::endl;
 	std::cout << "+------------+------------+------------+------------+" << std::endl;
+
 }
