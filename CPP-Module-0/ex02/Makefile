@@ -1,4 +1,4 @@
-NAME = Phonebook
+NAME = Account
 
 PATH_SRC = ./src
 

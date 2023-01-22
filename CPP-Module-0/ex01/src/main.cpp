@@ -7,6 +7,7 @@ int main(void) {
 	pb.show_instruction();
 	while (42)
 	{
+		std::cout << "-> ";
 		std::getline(std::cin, input);
 		if (input == "EXIT")
 			break;

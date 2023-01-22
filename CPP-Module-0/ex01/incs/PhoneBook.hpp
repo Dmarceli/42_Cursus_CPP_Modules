@@ -20,7 +20,7 @@ class PhoneBook{
 		void	show_instruction(void);
 		void	AddContact(void);
 		void	SearchContact(void);
-		void	DeleteOld(void);
+		int		CheckInput(str input);
 };
 
 #endif
