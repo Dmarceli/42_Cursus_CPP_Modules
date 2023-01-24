@@ -6,8 +6,8 @@
 class HumanB
 {
     private:
-        Weapon  *weapon;
-        str     name;
+        Weapon  *_weapon;
+        str     _name;
     public:
         HumanB(str name);
         ~HumanB();

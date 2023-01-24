@@ -9,14 +9,12 @@ typedef std::string	str;
 class Weapon
 {
     private:
-        str type;
-
+        str _type;
     public:
         Weapon();
-        //Weapon(Weapon &arma);
         Weapon(str type);
         ~Weapon(void);
-        str getType(void);
+        const str &getType(void);
         void setType(str type);
 };
 
