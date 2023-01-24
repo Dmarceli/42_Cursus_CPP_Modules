@@ -1,5 +1,4 @@
 #include "Account.hpp"
-#include <string>
 #include <iostream>
 #include <iomanip>
 typedef std::string	str;
