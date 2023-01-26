@@ -19,6 +19,7 @@ Fixed	&Fixed::operator=(const Fixed &src)
 	return (*this);
 }
 
+
 Fixed::~Fixed(){std::cout << "Destructor called" << std::endl;}
 
 int	Fixed::getRawBits( void ) const { return (_fixedpt); }

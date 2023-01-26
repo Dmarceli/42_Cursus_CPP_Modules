@@ -12,8 +12,12 @@ int main( void )
 
 	Fixed x;
 	x.setRawBits(120);
-	Fixed y = x;
+	Fixed y; 
+	y.setRawBits(110);
+
+	std::cout << "-------------\n";
 	std::cout << y.getRawBits() << std::endl;
+	std::cout << "-------------\n";
 	return 0;
 
 }
