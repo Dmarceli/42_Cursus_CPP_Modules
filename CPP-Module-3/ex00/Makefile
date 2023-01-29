@@ -1,12 +1,8 @@
-NAME = bsp
+NAME = ClapTrap
 
 PATH_SRC = ./src
 
-SRC = $(PATH_SRC)/main.cpp \
-		$(PATH_SRC)/Fixed.cpp \
-		$(PATH_SRC)/Point.cpp \
-		$(PATH_SRC)/bsp.cpp \
-
+SRC = $(PATH_SRC)/main.cpp 
 INCLUDES	=	./incs
 
 OBJ = $(SRC:%.cpp = %.o)
