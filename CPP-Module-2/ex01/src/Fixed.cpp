@@ -9,7 +9,7 @@ Fixed::Fixed()
 Fixed::Fixed(const int src)
 {
 	this->_fixedpt = src << Fixed::_frbits;
-	std::cout << "int constructor called" << std::endl;
+	std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float fractNb)

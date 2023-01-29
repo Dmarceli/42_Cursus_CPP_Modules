@@ -5,26 +5,31 @@
 Fixed::Fixed()
 {
 	_fixedpt = 0;
+	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const int src)
 {
 	this->_fixedpt = src << Fixed::_frbits;
+	std::cout << "int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float fractNb)
 {
 	this->_fixedpt = roundf(fractNb * (1 << Fixed::_frbits));
+	std::cout << "Float constructor called" << std::endl;
 }
 
 // destructor
 
-Fixed::~Fixed(){}
+Fixed::~Fixed(){std::cout << "Destructor called" << std::endl;}
+
 // copy assignment operator
 
 Fixed	&Fixed::operator=(const Fixed &src)
 {
 	this->_fixedpt = src._fixedpt;
+	std::cout << "Copy assignment operator called" << std::endl;
 	return (*this);
 }
 
