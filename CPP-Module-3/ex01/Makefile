@@ -1,9 +1,10 @@
-NAME = ClapTrap
+NAME = ScavTrap
 
 PATH_SRC = ./src
 
 SRC = $(PATH_SRC)/main.cpp \
-		$(PATH_SRC)/ClapTrap.cpp
+		$(PATH_SRC)/ClapTrap.cpp \
+		$(PATH_SRC)/ScavTrap.cpp \
 
 INCLUDES	=	./incs
 

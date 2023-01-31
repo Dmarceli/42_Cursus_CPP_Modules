@@ -11,9 +11,9 @@ cd ex$dir_name
 mkdir incs
 mkdir src && cd src && touch main.cpp && cd ..
 printf "${PURPLE}Enter the name of the executable:${RESET}" 
-read executable_name
+read exe_name
 
-echo "NAME = $executable_name
+echo "NAME = $exe_name
 
 PATH_SRC = ./src
 
