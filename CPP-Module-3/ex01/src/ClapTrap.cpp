@@ -35,13 +35,15 @@ ClapTrap::~ClapTrap()
 	std::cout << "ClapTrap: Deconstructor for " << _name << " called" << std::endl;
 }
 
-ClapTrap &ClapTrap::operator=( ClapTrap const & rhs )
+ClapTrap &ClapTrap::operator=(ClapTrap const &src)
 {
-	std::cout << "ClapTrap: Copy Assignment operator called" << std::endl;
-	*this = rhs;
-	return *this;
+	this->_name = src._name;
+	this->_hitPoints = src._hitPoints;
+	this->_energyPoints = src._energyPoints;
+	this->_attackPoints = src._attackPoints;
+	std::cout << "ClapTrap: Assignation operator called" << std::endl;
+	return (*this);
 }
-
 
 void			ClapTrap::setName( std::string name ) { this->_name = name; }
 

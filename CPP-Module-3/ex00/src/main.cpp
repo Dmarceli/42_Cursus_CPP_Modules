@@ -2,9 +2,11 @@
 
 int main()
 {
+	std::cout << "\e[1;35m---------------Constructing---------------\033[0m" << std::endl;
 	ClapTrap a("estupido");
 	ClapTrap b("ppnc");
 	ClapTrap c;
+	std::cout << "\e[1;35m---------------Testing---------------\033[0m" << std::endl;
 	a.setAttackPoints(2);
 	a.attack("some dude");
 	a.takeDamage(6);
@@ -17,5 +19,6 @@ int main()
 	b.takeDamage(a.getAttackPoints());
 	b.beRepaired(3);
 	b.beRepaired(3);
+	std::cout << "\e[1;35m---------------Deconstructing\033[0m---------------" << std::endl;
 	return (0);
 }

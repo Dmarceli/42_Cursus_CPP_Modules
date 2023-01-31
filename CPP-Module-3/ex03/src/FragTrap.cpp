@@ -34,6 +34,7 @@ FragTrap &				FragTrap::operator=( FragTrap const & rhs )
 	std::cout << "FragTrap: Copy Assignment operator called" << std::endl;
 	return(*this);
 }
+
 void	FragTrap::highFiveGuys(void)
 {
 	std::cout << "FragTrap: " << this->_name <<" asks if anybody want an high five? 👋" << std::endl;
