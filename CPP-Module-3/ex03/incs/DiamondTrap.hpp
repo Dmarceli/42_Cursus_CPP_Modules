@@ -12,10 +12,10 @@ class DiamondTrap : public ScavTrap , public FragTrap
 	public:
 
 		DiamondTrap();
-		DiamondTrap( DiamondTrap const & src );
+		DiamondTrap(DiamondTrap const &src);
+		DiamondTrap(str name);
 		~DiamondTrap();
-		DiamondTrap &operator=( DiamondTrap const & rhs );
-		virtual void getName();
+		DiamondTrap &operator=(DiamondTrap const &src);
 		void attack(const str &target);
 		void whoAmI();
 	private :

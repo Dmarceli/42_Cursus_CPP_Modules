@@ -27,9 +27,9 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap: " <<  this->getName() << " Destructor called" << std::endl;
 }
 
-ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
+ScavTrap &				ScavTrap::operator=( ScavTrap const & src )
 {
-	ClapTrap::operator=(rhs);
+	ClapTrap::operator=(src);
 	std::cout << "ScavTrap: Copy Assignment operator called" << std::endl;
 	return(*this);
 }
