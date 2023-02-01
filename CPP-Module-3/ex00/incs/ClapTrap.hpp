@@ -24,7 +24,7 @@ class ClapTrap
 		unsigned int getHitPoints(void) const;
 		unsigned int getEnergyPoints(void) const;
 		unsigned int getAttackPoints(void) const;
-		void attack(const std::string &target);
+		void attack(const str &target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 	private:

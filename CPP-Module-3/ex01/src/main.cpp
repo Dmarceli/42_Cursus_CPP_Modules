@@ -11,9 +11,12 @@ int main()
 	d.takeDamage(c.getAttackPoints());
 	d.guardGate();
 	d.beRepaired(50);
+	c.guardGate();
 	d.attack(c.getName());
 	c.takeDamage(d.getAttackPoints());
+	d.attack(c.getName());
 	c.takeDamage(d.getAttackPoints());
+	d.attack(c.getName());
 	c.takeDamage(d.getAttackPoints());
 	c.beRepaired(10);
 	std::cout << "\e[1;35m---------------Deconstructing\033[0m---------------" << std::endl;

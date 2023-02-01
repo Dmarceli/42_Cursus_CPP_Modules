@@ -76,7 +76,7 @@ void	ClapTrap::attack(const str &target)
 					<< target << ", because he has no energy." << std::endl;
 	else if (this->_hitPoints <= 0)
 		std::cout << "ClapTrap: " << this->_name << " can't attack " 
-					<< target << ", because he is dead." << std::endl;	
+					<< target << ", because he is dead." << std::endl;		
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
@@ -87,8 +87,14 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	{
 		this->_hitPoints -= amount;
 		std::cout << "ClapTrap: " << this->_name 
-				<< " lost " << amount << " hit points!" << std::endl; 
+				<< " lost " << amount << " hit points!" << std::endl;
 	}
+	else if ((int)amount >= this->_hitPoints)
+	{
+		std::cout << "ClapTrap: " << this->_name 
+					<< " lost " << this->_hitPoints << " hit points!" << std::endl; 
+		this->_hitPoints = 0;
+	}		
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)

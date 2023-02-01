@@ -28,7 +28,7 @@ FragTrap::~FragTrap()
 	std::cout << "FragTrap: " <<  this->getName() << " Destructor called" << std::endl;
 }
 
-FragTrap &				FragTrap::operator=(FragTrap const &src)
+FragTrap &FragTrap::operator=(FragTrap const &src)
 {	
 	ClapTrap::operator=(src);
 	std::cout << "FragTrap: Copy Assignment operator called" << std::endl;

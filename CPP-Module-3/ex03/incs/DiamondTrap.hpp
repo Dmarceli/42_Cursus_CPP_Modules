@@ -18,6 +18,7 @@ class DiamondTrap : public ScavTrap , public FragTrap
 		DiamondTrap &operator=(DiamondTrap const &src);
 		void attack(const str &target);
 		void whoAmI();
+		void displayinfo();
 	private :
 		str _name;
 };
