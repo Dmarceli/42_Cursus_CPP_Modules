@@ -37,11 +37,22 @@ int	main() {
 		std::cout << "Idea: " << a->getIdea(1) <<std::endl;
 		std::cout << "Idea: " << a->getIdea(2) <<std::endl;
 		std::cout << "\e[1;35m===========Testing Deep Copy===========\033[0m" << std::endl;
-		Dog *b = a;
-		std::cout << "Idea: " << b->getIdea(0) <<std::endl;
-		std::cout << "Idea: " << b->getIdea(1) <<std::endl;
-		std::cout << "Idea: " << b->getIdea(2) <<std::endl;
+		Dog b(*a);
+		std::cout << "Idea: " << b.getIdea(0) <<std::endl;
+		std::cout << "Idea: " << b.getIdea(1) <<std::endl;
+		std::cout << "Idea: " << b.getIdea(2) <<std::endl;
+		b.getBrain()->setIdea(3, "sou um caozinho");
+		std::cout << "Idea: " << b.getIdea(3) <<std::endl;
+		std::cout << "Idea: " << a->getIdea(3) <<std::endl;
 		std::cout << "\e[1;35m===========Destructing===========\033[0m" << std::endl;
 		delete a;
+	}
+	Dog basic;
+	basic.getBrain()->setIdea(0, "olaaa");
+	{
+		Dog tmp = basic;
+		std::cout << "Idea tmp: " << tmp.getIdea(0) <<std::endl;
+		tmp.getBrain()->setIdea(1, "adeus");
+		std::cout << "Idea Basic: " << basic.getIdea(1) <<std::endl;
 	}
 } 

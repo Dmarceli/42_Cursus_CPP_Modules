@@ -45,7 +45,7 @@ int main(void)
 		try 
 		{
 			std::cout << "\e[1;35m===========Constructing===========\033[0m" << std::endl;
-			Bureaucrat	suc( "succes", 140);
+			Bureaucrat	suc( "trial", 140);
 			suc.decrementGrade();
 			std::cout << suc << std::endl;
 		}

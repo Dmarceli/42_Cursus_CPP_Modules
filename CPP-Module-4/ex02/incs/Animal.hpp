@@ -9,11 +9,11 @@ typedef std::string	str;
 class Animal
 {
 	public:
-		Animal( Animal const & src );
 		virtual ~Animal();
 		Animal &operator=( Animal const & src );
-		virtual void makeSound()const;
+		virtual void makeSound()const = 0;
 		str getType()const;
+		Animal( Animal const & src );
 	protected:
 		Animal();
 		str _type;

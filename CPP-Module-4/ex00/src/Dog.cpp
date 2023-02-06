@@ -1,9 +1,5 @@
 #include "Dog.hpp"
 
-/*
-** ------------------------------- CONSTRUCTOR --------------------------------
-*/
-
 Dog::Dog() : Animal()
 {
 	this->_type = "Dog";

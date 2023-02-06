@@ -6,6 +6,7 @@ int main()
 	DiamondTrap a("sapinho");
 	DiamondTrap b("ppnc");
 	std::cout << "\e[1;35m---------------Testing---------------\033[0m" << std::endl;
+	std::cout << a.getEnergyPoints() << std::endl; 
 	a.highFiveGuys();
 	a.guardGate();
 	b.highFiveGuys();

@@ -5,7 +5,7 @@ DiamondTrap::DiamondTrap()
 	this->_name = "default";
 	ClapTrap::_name = "default_clap_name";
 	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_energyPoints = ScavTrap().getEnergyPoints();
 	this->_attackPoints = FragTrap::_attackPoints;
 	this->_maxHealth = FragTrap::_maxHealth;
 	std::cout << "DiamondTrap: Default constructor called" << std::endl;
@@ -16,7 +16,7 @@ DiamondTrap::DiamondTrap(str name)
 	ClapTrap::_name = (name + "_clap_name");
 	this->_name = name;
 	this->_hitPoints = FragTrap::_hitPoints;
-	this->_energyPoints = ScavTrap::_energyPoints;
+	this->_energyPoints = 50;
 	this->_attackPoints = FragTrap::_attackPoints;
 	this->_maxHealth = FragTrap::_maxHealth;
 	std::cout << "DiamondTrap: constructor for the name " << this->_name << " called" << std::endl;
