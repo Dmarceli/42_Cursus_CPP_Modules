@@ -8,18 +8,15 @@ typedef std::string	str;
 
 class Animal
 {
-
 	public:
-
-		Animal();
 		Animal( Animal const & src );
 		virtual ~Animal();
 		Animal &operator=( Animal const & src );
 		virtual void makeSound()const;
 		str getType()const;
 	protected:
+		Animal();
 		str _type;
-
 };
 
 

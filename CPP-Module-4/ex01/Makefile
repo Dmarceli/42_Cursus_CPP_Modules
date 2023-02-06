@@ -1,13 +1,12 @@
-NAME = Animal
+NAME = Brain
 
 PATH_SRC = ./src
 
 SRC = $(PATH_SRC)/main.cpp \
-		 $(PATH_SRC)/Animal.cpp \
-		 $(PATH_SRC)/WrongAnimal.cpp \
-		 $(PATH_SRC)/Dog.cpp \
-		 $(PATH_SRC)/Cat.cpp \
-		 $(PATH_SRC)/WrongCat.cpp \
+		$(PATH_SRC)/Animal.cpp \
+		$(PATH_SRC)/Dog.cpp \
+		$(PATH_SRC)/Cat.cpp \
+		$(PATH_SRC)/Brain.cpp 
 
 INCLUDES	=	./incs
 
@@ -15,7 +14,7 @@ OBJ = $(SRC:%.cpp = %.o)
 
 CC = c++
 
-FLAGS = -g -Wall -Wextra -Werror -std=c++98 -fsanitize=address 
+FLAGS = -g -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
 
 all: $(NAME)
 

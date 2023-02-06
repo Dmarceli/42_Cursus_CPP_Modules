@@ -7,7 +7,7 @@ int main()
 	Point B(4.0f, 4.0f); 
 	Point C(0.0f, 3.0f);
 
-	Point TesteY(2.0f, 2.0f);
+	Point TesteY(1.0f, 0.0f);
 	Point TesteX(2.0f, 2.0f);
 	Point TesteZ(5.0f, 5.0f);
 

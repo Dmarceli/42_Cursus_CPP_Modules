@@ -26,7 +26,7 @@ Animal &				Animal::operator=(Animal const &src)
 
 void Animal::makeSound()const
 {
-	std::cout << "default animals dont make sounds!" << std::endl;
+	std::cout << "Default animals dont make sounds!" << std::endl;
 	return ;
 }
 

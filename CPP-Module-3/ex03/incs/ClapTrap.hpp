@@ -15,7 +15,7 @@ class ClapTrap
 		ClapTrap(str name);
 		ClapTrap(ClapTrap const & src);
 		~ClapTrap();
-		ClapTrap &operator=(ClapTrap const &rhs);
+		ClapTrap &operator=(ClapTrap const &src);
 		str	getName();
 		void setName(str name);
 		void setHitPoints(unsigned int hitpts);

@@ -18,8 +18,5 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
 	float P_area = areaTriangle(a,b,point);  
 	float P_area1 = areaTriangle(a,point,c);  
 	float P_area2 = areaTriangle(point,b,c);
-	if (T_area == (P_area1 + P_area2 + P_area))
-		return (true);
-	else
-		return(false);
+	return(T_area == (P_area1 + P_area2 + P_area) && P_area && P_area1 && P_area2);
 }

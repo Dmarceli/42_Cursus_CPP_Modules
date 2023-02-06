@@ -1,13 +1,9 @@
-NAME = Animal
+NAME = Bureaucrat
 
 PATH_SRC = ./src
 
 SRC = $(PATH_SRC)/main.cpp \
-		 $(PATH_SRC)/Animal.cpp \
-		 $(PATH_SRC)/WrongAnimal.cpp \
-		 $(PATH_SRC)/Dog.cpp \
-		 $(PATH_SRC)/Cat.cpp \
-		 $(PATH_SRC)/WrongCat.cpp \
+		$(PATH_SRC)/Bureaucrat.cpp 
 
 INCLUDES	=	./incs
 
