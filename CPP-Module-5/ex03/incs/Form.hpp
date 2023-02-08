@@ -15,7 +15,7 @@ class Form
 		Form();
 		Form(str const, int, int);
 		Form( Form const & src );
-		~Form();
+		virtual ~Form();
 		Form &		operator=( Form const &src );
 		void	beSigned(Bureaucrat &bur)throw(std::exception);
 		str		getName()const;

@@ -1,4 +1,4 @@
-NAME = Forms
+NAME = Intern
 
 PATH_SRC = ./src
 
@@ -8,6 +8,7 @@ SRC = $(PATH_SRC)/main.cpp \
 		$(PATH_SRC)/ShrubberyCreationForm.cpp \
 		$(PATH_SRC)/RobotomyRequestForm.cpp \
 		$(PATH_SRC)/PresidentialPardonForm.cpp \
+		$(PATH_SRC)/Intern.cpp \
 
 INCLUDES	=	./incs
 

@@ -26,7 +26,8 @@
 		"system_error": "cpp",
 		"type_traits": "cpp",
 		"typeinfo": "cpp",
-		"numbers": "cpp"
+		"numbers": "cpp",
+		"fstream": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }
