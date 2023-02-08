@@ -41,12 +41,12 @@ std::ostream &			operator<<( std::ostream & o, Bureaucrat const & i )
 
 const char*	Bureaucrat::GradeTooHighException::what() const throw()
 {
-	return ("Bureaucrat GradeTooHighExecption");
+	return ("Bureaucrat GradeTooHighException");
 }
 
 const char*	Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return ("Bureaucrat GradeTooLowExecption");
+	return ("Bureaucrat GradeTooLowException");
 }
 
 void	Bureaucrat::incrementGrade()

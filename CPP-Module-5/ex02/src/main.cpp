@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main(void)
 {
@@ -43,5 +44,10 @@ int main(void)
 			Form b("a", 0, -1);
 		}
 		catch (std::exception &error){std::cout << error.what() << std::endl;}
+	}
+	{
+		Bureaucrat exec("exec", 146);
+		ShrubberyCreationForm A("ze manel");
+		A.execute(exec);
 	}
 }

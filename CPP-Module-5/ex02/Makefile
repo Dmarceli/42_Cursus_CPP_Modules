@@ -1,10 +1,11 @@
-NAME = Form
+NAME = Forms
 
 PATH_SRC = ./src
 
 SRC = $(PATH_SRC)/main.cpp \
 		$(PATH_SRC)/Form.cpp \
 		$(PATH_SRC)/Bureaucrat.cpp \
+		$(PATH_SRC)/ShrubberyCreationForm.cpp \
 
 INCLUDES	=	./incs
 
