@@ -77,10 +77,10 @@ void Form::checkValue(int grade_num) throw(std::exception) {
 }
 
 void Form::checkBureaucrat(Bureaucrat const &b) const throw(std::exception) {
-	if (b.getGrade() > this->getGradeToExec())
-		throw Form::TooLowToExecuteException();
-	else if(!this->_isSigned)
+	if(!this->_isSigned)
 		throw Form::NotSignedException();
+	else if (b.getGrade() > this->getGradeToExec())
+		throw Form::TooLowToExecuteException();
 	
 }
 
@@ -105,3 +105,16 @@ int Form::getGradeToExec()const{return(this->_gradeToExec);}
 bool Form::getSignedStatus()const{return(this->_isSigned);}
 
 str Form::getName()const{return(this->_name);}
+
+void Form::execute(Bureaucrat const & executor) const throw (std::exception)
+{
+	checkBureaucrat(executor);
+	//execution(_target);
+	std::cout << GREEN << executor.getName() << " successfully executed form "  << 
+		this->getName()	<< BLANK << std::endl;
+}
+
+void Form::execution(str const target)const{
+	(void)target;
+	return;
+	}

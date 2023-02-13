@@ -3,7 +3,7 @@
 
 # include <iostream>
 # include <string>
-
+# include "Form.hpp"
 #define BLANK "\033[0m"
 #define RED "\033[38;5;1m"
 #define PURPLE "\033[38;5;13m"
@@ -12,23 +12,24 @@
 #define GREEN "\033[38;5;47m"
 #define ORANGE "\033[38;5;208m"
 
+class Form;
+
 typedef std::string	str;
 
 class Bureaucrat
 {
 
 	public:
-
 		Bureaucrat();
 		Bureaucrat( Bureaucrat const & src );
 		~Bureaucrat();
 		Bureaucrat(std::string name, int grade);
 		Bureaucrat &		operator=( Bureaucrat const & src );
-		void	signForm(std::string form, bool isSigned);
+		void			signForm(Form& form);
 		str const&		getName( void )const;
 		int				getGrade( void ) const;
-		void incrementGrade(void);
-		void decrementGrade(void);
+		void			incrementGrade(void);
+		void			decrementGrade(void);
 		class GradeTooLowException : public std::exception
 		{
 		public:

@@ -38,7 +38,7 @@ std::ostream &operator<<( std::ostream &o, Form const &i )
 {
 	o << ORANGE << "Form: "<< i.getName() << std::endl <<
 		" with minimum value to be signed: " << i.getGradeToSign() <<std::endl <<
-		" and minimum value to execute: " << i.getGradeToÊxec() <<std::endl <<
+		" and minimum value to execute: " << i.getGradeToExec() <<std::endl <<
 		" and signed status of: " << (i.getSignedStatus() ? "Signed" : "Not Signed")<<std::endl <<
 		BLANK << std::endl;
 	return o;
@@ -46,13 +46,24 @@ std::ostream &operator<<( std::ostream &o, Form const &i )
 
 const char*	Form::GradeTooHighException::what() const throw()
 {
-	return ("Form GradeTooHighExecption");
+	return ("\033[38;5;1mForm GradeTooHighExecption\033[0m");
 }
 
 const char*	Form::GradeTooLowException::what() const throw()
 {
-	return ("Form GradeTooLowExecption");
+	return ("\033[38;5;1mForm GradeTooLowExecption\033[0m");
 }
+
+const char*	Form::NotSignedException::what() const throw()
+{
+	return ("\033[38;5;1mForm Not Signed!\033[0m");
+}
+
+const char*	Form::AlreadySignedException::what() const throw()
+{
+	return ("\033[38;5;1mForm Already Signed!\033[0m");
+}
+
 
 void Form::checkValue(int grade_num) throw(std::exception) {
 	if (grade_num < 1)
@@ -66,7 +77,7 @@ void Form::beSigned(Bureaucrat &b) throw(std::exception)
 	if (b.getGrade() > this->getGradeToSign())
 		throw Bureaucrat::GradeTooLowException();
 	else if(this->_isSigned)
-		std::cout << b.getName() << " couldn't sing this Form because it's already Signed!" << std::endl;
+		throw Form::AlreadySignedException();
 	else
 	{
 		this->_isSigned = true;

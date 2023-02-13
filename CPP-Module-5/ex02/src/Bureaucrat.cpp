@@ -68,3 +68,19 @@ void	Bureaucrat::decrementGrade()
 str	const &Bureaucrat::getName()const{return (this->_name);}
  
 int	Bureaucrat::getGrade()const{return (this->_grade);}
+
+void	Bureaucrat::signForm(Form &form)
+{
+	try{
+		form.beSigned(*this);
+	}
+	catch (std::exception& e){std::cout << e.what() << std::endl;}
+}
+
+void Bureaucrat::executeForm(Form const &form)
+{
+	try {
+		form.execute(*this);
+	}
+	catch (std::exception& e){std::cout << e.what() << std::endl;}
+}

@@ -32,6 +32,7 @@ bool randomBool()
     srand(time(NULL));
     return rand() % 2 == 0;	
 }
+
 void RobotomyRequestForm::execution(str const target)const
 {
 	std::cout << "drrrrrrrrrrrrrrrRRRRRRRRRR drrrrrrrrrrrrrrrRRRRRRRRRR" << std::endl;

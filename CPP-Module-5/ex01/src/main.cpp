@@ -44,4 +44,18 @@ int main(void)
 		}
 		catch (std::exception &error){std::cout << error.what() << std::endl;}
 	}
+	{
+		Bureaucrat tia("jocelyn", 145);
+		Form funana("drena", 150,150);
+		std::cout << funana ;
+		tia.signForm(funana);
+		std::cout << funana ;
+	}
+	{
+		Bureaucrat tia("jocelyn", 145);
+		Form funana("drena", 150,150);
+		std::cout << funana ;
+		funana.beSigned(tia);
+		std::cout << funana ;
+	}
 }

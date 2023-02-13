@@ -3,9 +3,11 @@
 # include <stdexcept>
 # include <iostream>
 # include <string>
+# include "Form.hpp"
 
 #include "Bureaucrat.hpp"
 
+class Bureaucrat;
 typedef std::string	str;
 
 class Form
@@ -21,7 +23,7 @@ class Form
 		str		getName()const;
 		bool	getSignedStatus()const;
 		int		getGradeToSign()const;
-		int		getGradeToÊxec()const;
+		int		getGradeToExec()const;
 		void 	checkValue(int) throw(std::exception);
 		class GradeTooHighException : public std::exception
 		{
@@ -29,6 +31,16 @@ class Form
 				virtual const char* what() const throw();
 		};
 		class GradeTooLowException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+		class NotSignedException : public std::exception
+		{
+			public:
+				virtual const char* what() const throw();
+		};
+		class AlreadySignedException : public std::exception
 		{
 			public:
 				virtual const char* what() const throw();
@@ -42,4 +54,4 @@ class Form
 
 std::ostream &			operator<<( std::ostream & o, Form const & i );
 
-#endif /* ************************************************************ FORM_H */
+#endif

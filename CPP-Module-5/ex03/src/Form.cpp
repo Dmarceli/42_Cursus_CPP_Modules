@@ -97,6 +97,18 @@ void Form::beSigned(Bureaucrat &b) throw(std::exception)
 		this->getName()	<< std::endl;
 	}
 }
+void Form::execute(Bureaucrat const & executor) const throw (std::exception)
+{
+	checkBureaucrat(executor);
+	//execution(_target);
+	std::cout << GREEN << executor.getName() << " successfully executed form "  << 
+		this->getName()	<< BLANK << std::endl;
+}
+
+void Form::execution(str const target)const{
+	(void)target;
+	return;
+}
 
 int Form::getGradeToSign()const{return(this->_gradeToSign);}
 

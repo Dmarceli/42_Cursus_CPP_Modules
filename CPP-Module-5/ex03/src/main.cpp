@@ -7,23 +7,16 @@
 
 int main(void)
 {
-	// {
-	// 	try{
-	// 		std::cout << "\e[1;35m===========Constructing===========\033[0m" << std::endl;
-	// 		Intern A;
-	// 		std::cout << "\e[1;35m===========Testing===========\033[0m" << std::endl;
-	// 		A.
-	// 		std::cout << "\e[1;35m===========Destructing===========\033[0m" << std::endl;
-	// 	}
-	// 	catch (std::exception &error){std::cout << error.what() << std::endl;}	
-	// }
 	{
 		std::cout << "\e[1;35m===========Constructing===========\033[0m" << std::endl;
 		Intern  someRandomIntern;
 		Form* rrf;
+		Bureaucrat tio("ze", 10);
 		std::cout << "\e[1;35m===========Testing===========\033[0m" << std::endl;
-		rrf = someRandomIntern.makeForm("RobotomyRequestForm", "Bender");
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 		std::cout << *rrf;
+		rrf->beSigned(tio);
+		//tio.execute(*rrf);
 		std::cout << "\e[1;35m===========Destructing===========\033[0m" << std::endl;
 		delete rrf;
 	}

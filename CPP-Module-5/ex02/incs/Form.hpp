@@ -8,6 +8,8 @@
 
 typedef std::string	str;
 
+class Bureaucrat;
+
 class Form
 {
 
@@ -24,7 +26,7 @@ class Form
 		int		getGradeToExec()const;
 		void 	checkValue(int) throw(std::exception);
 		void	checkBureaucrat(Bureaucrat const &b) const throw(std::exception);
-		void 	execute(Bureaucrat const &executor)const throw (std::exception);
+		virtual void 	execute(Bureaucrat const &executor)const throw (std::exception);
 		virtual void 	execution(str const target)const = 0;
 		class GradeTooHighException : public std::exception
 		{

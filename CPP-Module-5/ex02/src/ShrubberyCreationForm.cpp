@@ -45,7 +45,6 @@ void ShrubberyCreationForm::execution(str const target)const
 			file << "       |.|        | |         | |" << std::endl;
             file << "jgs \\/ ._\\//_/__/  ,\\_//__\\\\/.  \\_//__/_" << std::endl;
 		}
-
 	}
 	file.close();
 }

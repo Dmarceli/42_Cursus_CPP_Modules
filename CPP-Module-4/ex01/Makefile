@@ -14,7 +14,7 @@ OBJ = $(SRC:%.cpp = %.o)
 
 CC = c++
 
-FLAGS = -g -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
+FLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
 
 all: $(NAME)
 
