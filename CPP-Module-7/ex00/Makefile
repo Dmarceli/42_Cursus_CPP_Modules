@@ -1,9 +1,8 @@
-NAME = Conversion
+NAME = Templates
 
 PATH_SRC = ./src
 
-SRC = $(PATH_SRC)/main.cpp \
-		$(PATH_SRC)/Conversion.cpp 
+SRC = $(PATH_SRC)/main.cpp 
 
 INCLUDES	=	./incs
 

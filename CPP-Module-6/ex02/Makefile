@@ -1,9 +1,9 @@
-NAME = Conversion
+NAME = Types
 
 PATH_SRC = ./src
 
 SRC = $(PATH_SRC)/main.cpp \
-		$(PATH_SRC)/Conversion.cpp 
+		$(PATH_SRC)/Base.cpp 
 
 INCLUDES	=	./incs
 
