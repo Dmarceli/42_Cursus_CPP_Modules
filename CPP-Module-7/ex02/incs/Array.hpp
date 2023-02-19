@@ -16,26 +16,39 @@ class Array
 		{
 			this->_array = new T[0];
 			this->_size = 0;
-			//print( "Array default constructor called" );
 		}
 		Array( unsigned int size )
 		{
 			this->_array = new T[size];
 			this->_size = size;
-			//print( "Array constructor called" );
+
 		}
-		Array( Array const & src );
-		~Array()
+		Array( Array const & src )
 		{
-			delete [] this->_array;
+			this->_size = src._size;
+			this->_array = new T[_size];
+			for (int i = 0; i < _size; i++)
+				this->_array[i] = src._array[i]; }
+		~Array(){delete [] this->_array;}
+		Array &		operator=( Array const & src )
+		{
+			this->_size = src._size;
+			this->_array = new T[_size];
+			for (int i = 0; i < _size; i++)
+				this->_array[i] = src._array[i];
+			return(*this);
 		}
-		Array &		operator=( Array const & src );
-		T&		operator[]( unsigned int n ) throw( std::exception );
+		T&		operator[]( unsigned int n ) throw(std::exception){
+			if (n > _size)
+				throw(std::exception());
+			else
+				return (_array[n]);
+		}
 		class OutOfBoundsException : public std::exception {
 			public:
 				char const*	what( void ) const throw();
 		};
-		unsigned int	size( void ) const;
+		unsigned int	size( void ) const{return(this->size);}
 	private:
 		T*				_array;
 		unsigned int	_size;
