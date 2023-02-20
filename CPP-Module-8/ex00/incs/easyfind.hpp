@@ -3,13 +3,16 @@
 
 # include <iostream>
 # include <string>
-#include <iterator>
-#include <vector>
-#include <algorithm>
-#include <list>
+# include <iterator>
+# include <vector>
+# include <algorithm>
+# include <list>
+# include <stdexcept>
+
 #define PURPLE "\033[38;5;13m"
 #define ORANGE "\033[38;5;208m"
 #define BLANK "\033[0m"
+
 class NotFoundException : public std::exception
 {
 	public:
@@ -17,8 +20,6 @@ class NotFoundException : public std::exception
 			return ("value not found");
 		};
 };
-
-
 
 template <typename T>
 typename T::iterator easyfind(T container, int value) {
@@ -29,4 +30,4 @@ typename T::iterator easyfind(T container, int value) {
     	return it;
 }
 
-#endif /* ******************************************************** EASYFIND_H */
+#endif 
