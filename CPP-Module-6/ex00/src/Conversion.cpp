@@ -122,24 +122,20 @@ void print_double(str arg)
 
 void Conversion::handleINFSAndNAN()
 {
+	std::cout << "char: impossible" << std::endl;
+	std::cout << "int: impossible" << std::endl;
 	if (_argType == INF_ || _argType == INFF_)
 	{
-		std::cout << "char: impossible" << std::endl;
-		std::cout << "int: impossible" << std::endl;
 		std::cout << "float: inff" << std::endl;
 		std::cout << "double: inf" << std::endl;
 	}
 	else if (_argType == NINF_ || _argType == NINFF_)
 	{
-		std::cout << "char: impossible" << std::endl;
-		std::cout << "int: impossible" << std::endl;
 		std::cout << "float: -inff" << std::endl;
 		std::cout << "double: -inf" << std::endl;
 	}
 	else if(_argType == NAN_ || _argType == NANF_ )
 	{
-		std::cout << "char: impossible" << std::endl;
-		std::cout << "int: impossible" << std::endl;
 		std::cout << "float: nanf" << std::endl;
 		std::cout << "double: nan" << std::endl;
 	}

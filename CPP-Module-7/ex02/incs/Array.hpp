@@ -6,6 +6,9 @@
 # include <exception>
 #include <cstdlib>
 #include <fstream>
+
+#define MAX_VAL 750
+
 template <typename T>
 class Array
 {
@@ -40,15 +43,17 @@ class Array
 		}
 		T&		operator[]( unsigned int n ) throw(std::exception){
 			if (n > _size)
-				throw(std::exception());
+				throw(OutOfBoundsException());
 			else
 				return (_array[n]);
 		}
 		class OutOfBoundsException : public std::exception {
 			public:
-				char const*	what( void ) const throw();
+				char const*	what( void ) const throw(){
+					return("Index Out Of Bounds!");
+				};
 		};
-		unsigned int	size( void ) const{return(this->size);}
+		unsigned int	size( void ) const{return(this->_size);}
 	private:
 		T*				_array;
 		unsigned int	_size;
@@ -56,5 +61,9 @@ class Array
 
 template< typename T >
 void print(T x) {std::cout << x << std::endl; return; }
+
+
+template< typename T >
+void print(T x, T y) {std::cout << x << ", " << y <<std::endl; return; }
 
 #endif

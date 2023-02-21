@@ -88,5 +88,6 @@ void	Span::addNumber(unsigned int x, unsigned int y)
 		else
 			throw (NoMoreSpacesException());
 	}
+	std::sort(_vec.begin(), _vec.begin() + _vec.size());
 }
 
