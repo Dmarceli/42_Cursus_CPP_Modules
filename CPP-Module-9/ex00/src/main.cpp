@@ -23,7 +23,7 @@ int parseValue(double value)
 		std::cout << "Error: not a positive number." << std::endl;
 		return(1);
 	}
-	else if (value >= 2147483647)
+	if (value >= 2147483647)
 	{
 		std::cout << "Error: too large a number." << std::endl;
 		return(1);
@@ -45,7 +45,6 @@ std::map<str, double> buildMapFromFile(const str& filename)
     }
     return data_map;
 }
-
 
 void searchInput(const str& filename, std::map<str, double> data_map)
 {
