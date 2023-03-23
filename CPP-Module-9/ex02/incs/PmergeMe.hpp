@@ -18,6 +18,7 @@ class PmergeMe
 		~PmergeMe();
 		PmergeMe &operator=( PmergeMe const & rhs );
 		void error(){std::cout << "Error\n";exit(0);}
+		void verify_args(char **av);
 		void load_vector(char **av);
 		std::vector<unsigned int> merge_vec(std::vector<unsigned int> &v);
 		std::list<unsigned int> merge_lst(std::list<unsigned int> &lst);

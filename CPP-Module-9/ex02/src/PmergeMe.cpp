@@ -23,13 +23,26 @@ long double get_time(){
 
 PmergeMe::PmergeMe(){}
 
+void PmergeMe::verify_args(char **av)
+{
+	int i = 0;
+	while(av[++i])
+	{
+		for (int j = 0; av[i][j]; j++)
+        {
+            if (!std::isdigit(av[i][j]))
+               error();
+        }
+	}
+}
+
 PmergeMe::PmergeMe(int ac, char **av): _vecsize(ac - 1)
 {
 	long double vectime;
 	long double listime;
-
 	if(_vecsize < 3)
 		error();
+	verify_args(av);
 	load_vector(av);
 	print(_vec, 0);
 	vectime = get_time();
