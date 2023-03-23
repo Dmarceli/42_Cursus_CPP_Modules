@@ -11,7 +11,7 @@ OBJ = $(SRC:%.cpp = %.o)
 
 CC = c++
 
-FLAGS = -g -Wall -Wextra -Werror -std=c++98 -fsanitize=address 
+FLAGS = -g -Wall -Wextra -Werror -std=c++98 -fsanitize=address -O3 -march=native -ffast-math -ffinite-math-only
 
 all: $(NAME)
 
