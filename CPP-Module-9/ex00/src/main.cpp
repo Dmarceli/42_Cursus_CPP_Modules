@@ -2,13 +2,12 @@
 
 int parseDate(str date)
 {
-
 	int yy, mm, dd;
 	yy = std::atoi(date.substr(0,date.find("-")).c_str());
 	mm = std::atoi(date.substr(date.find("-") +1 ,2).c_str());
 	dd = std::atoi(date.substr(8).c_str());
 	if ( yy > 2023 || yy < 0 || mm <= 0 || mm > 12 || dd <= 0 || dd > 30 
-	|| date.length() != 10 || date[4] != '-' || date[7] != '-')
+	|| date[4] != '-' || date[7] != '-')
 	{
 		std::cout << "Error: bad input => " << date << std::endl;
 		return(1);
@@ -23,7 +22,7 @@ int parseValue(double value)
 		std::cout << "Error: not a positive number." << std::endl;
 		return(1);
 	}
-	if (value >= 2147483647)
+	if (value >= 1000)
 	{
 		std::cout << "Error: too large a number." << std::endl;
 		return(1);
@@ -50,10 +49,14 @@ void searchInput(const str& filename, std::map<str, double> data_map)
 {
 	std::ifstream infile(filename.c_str());
 	str line;
+	std::getline(infile, line);
     while (std::getline(infile, line)) 
 	{
 		if (!is_all_digit(line))
+		{
+			std::cout << "Error: bad input => " << line << std::endl;
 			continue;
+		}
 		str date_str = line.substr(0, line.find("|") -1);
 		double value = std::atof(line.substr(line.find("|") + 1).c_str());
 		if(parseDate(date_str) || parseValue(value))
