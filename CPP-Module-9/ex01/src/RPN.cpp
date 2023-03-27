@@ -24,11 +24,11 @@ void RPN::print_stack() const
 
 void RPN::operate(char c)
 {
+	if (OP_Stack.size() < 2)
+		Error();
 	int operand1, operand2;
 	operand2 = OP_Stack.top();
 	OP_Stack.pop();
-	if (OP_Stack.empty())
-		Error();
 	operand1 = OP_Stack.top();
 	OP_Stack.pop();
 	switch (c) 

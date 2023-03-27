@@ -4,7 +4,7 @@
 
 int main(int ac, char**av)
 {
-	if (ac == 2)
+	if (ac == 2 && av[1][0])
 	{
 		RPN trio(av[1]);
 		return(0);
