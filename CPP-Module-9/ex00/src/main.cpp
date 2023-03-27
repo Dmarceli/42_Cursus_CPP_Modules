@@ -6,7 +6,7 @@ int parseDate(str date)
 	yy = std::atoi(date.substr(0,date.find("-")).c_str());
 	mm = std::atoi(date.substr(date.find("-") +1 ,2).c_str());
 	dd = std::atoi(date.substr(8).c_str());
-	if ( yy > 2023 || yy < 0 || mm <= 0 || mm > 12 || dd <= 0 || dd > 30 
+	if ( yy > 2023 || yy < 0 || mm <= 0 || mm > 12 || dd <= 0 || dd > 31 
 	|| date[4] != '-' || date[7] != '-')
 	{
 		std::cout << "Error: bad input => " << date << std::endl;
